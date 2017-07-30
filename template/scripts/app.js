@@ -4,4 +4,4 @@ function _(id){
 }
 
 var h = window.innerHeight;
-_('container').style.height = (h-85)+'px';
+_('container').style.height = (h-80)+'px';

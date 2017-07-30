@@ -2,46 +2,41 @@
 <html>
 <head>
 	<title>Login Page</title>
-	<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
   <link rel="shortcut icon" href="img/favicon2.ico" type="image/x-icon">
 </head>
 <body>
-	<div class="container">
-      <div class="header clearfix">
-        <h3 class="text-muted">Hello Books</h3>
+  <div id="wrapper"><!-- body begins -->
+
+    <div id="header"><!-- Header starts -->
+      <div id="logo"><img src="img/favicon1.png"></div>
+      <div id="title"><h1>Hello Books</h1></div>
+      <div class="clear"></div>
+    </div><!--Header Ends -->
+
+    <div id="container"><!--Contenter starts -->
+      <div id="form">
+        <form method="post">
+          <h2>Sign in</h2>
+          
+          <input type="email" placeholder="Enter Email" name="" required autofocus>
+          <input type="password" placeholder="Enter Password" name="" required>
+
+          <p class="form-text">Have you forgotten Your <br><a href="recover_pass.html">Password?</a></p>
+
+          <input type="submit" value="Sign in"  name="">
+          <p class="form-text">or</p>
+          <div id="g_plus">
+            <img src="img/g+.png">
+          </div>
+
+          <p class="form-text">Do you wish to Resiger <br>for <a href="register.html">a new account</a>? </p>
+
+        </form>
       </div>
 
-      <div class="row">
-        <div class="form">
-          <form class="form-signin">
-            <h4 class="form-signin-heading">Login</h4>
-
-            <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" value="remember-me"> Remember me
-              </label>
-            </div>
-
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-            <p style="text-align:center">- OR - <br> <a href="register.html"> Sign Up </a><br></p>
-            <a href="#">forgotten Pasword?</a>
-            
-          </form>
-        </div>
-      </div>
-
-      <footer class="footer">
-        <p>&copy; 2016 Hello-Books, Inc.</p>
-      </footer>
-
-    </div> <!-- /container -->
-
+    </div><!--Container ends -->
+  </div><!--body ends -->
 </body>
 </html>

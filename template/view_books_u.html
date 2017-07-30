@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Page</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link rel="shortcut icon" href="img/favicon2.ico" type="image/x-icon">
+</head>
+<body>
+	<div class="wrapper">
+      <div id="header">
+        <h3>Hello Books</h3>
+        <div id="welcome"><h5>Welcome User</h5></div>
+        <div class="clear"></div>
+      </div>
+      <div id="container">
+        <div id="menu">
+          <<ul>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="view_books_u.html">View Books</a></li>
+            <li><a href="pending.html">Pending <span style="background: red; border-radius: 100%; padding: 2%;">2</span></a></li>
+            <li><a href="history.html">Borrowing History</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="login.html">Logout</a></li>
+          </ul>
+        </div>
+        <div id="content">
+          <h3>View Books</h3>
+          <div id="search">
+          <form>
+          <input type="text" style="width: 70%; margin-top:0;" placeholder="Search by Author, Cetegory, Book Name or book Id" name="">
+          <input type="submit" value="Search" name="">
+        </div>
+          <button class="btn btn-default" id="previous">Previous</button>
+          <button class="btn btn-default" id="next">Next</button>
+        <br>
+        <br>
+          <table class="table table-hover" id="view">
+            <tr>
+              <th>S/N</th>
+              <th>Book Name</th>
+              <th>Author</th>
+              <th>Category</th>
+              <th>Quantity</th>
+              <th>Details</th>              
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Fundamentals of Programing</td>
+              <td>Xender Opium</td>
+              <td>Computer</td>
+              <td>2 </td>
+              <td><a href="details.html">View</td>              
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Physics</td>
+              <td>E.A Newnam</td>
+              <td>Science</td>
+              <td>4 </td>
+              <td><a href="details.html">View</td>              
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Diffrential Mathematics</td>
+              <td>Sami Proxie</td>
+              <td>Computer</td>
+              <td>4 </td>
+              <td><a href="details.html">View</td>              
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Romeo & Juilet</td>
+              <td>William Shakspare</td>
+              <td>Poetery</td>
+              <td>10 </td>
+              <td><a href="details.html">View</td>              
+            </tr>
+          </table>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2016 Hello-Books, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+<!--Loading Js Scripts -->
+<script type="text/javascript" src="scripts/app.js"></script>
+
+</body>
+</html>

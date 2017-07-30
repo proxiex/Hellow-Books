@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Profile Page</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+
+  <link rel="stylesheet" href="styles/dialog.css">
+  <script src="scripts/dialog.js"></script>
+
+  <link rel="shortcut icon" href="img/favicon2.ico" type="image/x-icon">
+</head>
+<body>
+	<div class="wrapper">
+      <div id="header">
+        <h3>Hello Books</h3>
+        <div id="welcome"><h5>Welcome User</h5></div>
+        <div class="clear"></div>
+      </div>
+      <div id="container">
+        <div id="menu">
+          <ul>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="view_books_u.html">View Books</a></li>
+            <li><a href="pending.html">Pending <span style="background: red; border-radius: 100%; padding: 2%;">2</span></a></li>
+            <li><a href="history.html">Borrowing History</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="login.html">Logout</a></li>
+          </ul>
+        </div>
+        <div id="content">
+        <h3>Samuel Longshak</h3>
+          <div id="photo">
+            <img src="img/me.jpg"><br>
+            <form>Change Image<input type="file" name=""></form>
+          </div>
+          <div id="details">
+            <table class="table table-hover" >
+              <tr>
+                <th>Username</th>
+                <td>Proxie</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Email</th>
+                <td>difrentecho@gmail.com</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Membership Level</th>
+                <td>Gold</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Books Borrowed</th>
+                <td>20</td>
+                <td><a href="history.html">View History</a></td>
+              </tr>
+              <tr>
+                <th>Books Returned</th>
+                <td>19</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Books yet to Return</th>
+                <td>1</td>
+                <td><a href="pending.html">View</a></td>
+              </tr>
+               <tr>
+                <th>Books Left to borrow</th>
+                <td>3</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Health</th>
+                <td colspan="2"><div style="background: #3f3; width: 78%; text-align: center;">Good</div></td>
+              </tr>
+              <tr>
+                <td colspan="3"><button  onclick="Alert.render('<p>Your Request has bee! sent</p>')" class="btn btn-warning">Request for Membership Upgrade</button></td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div id="dialogoverlay"></div>
+      <div id="dialogbox">
+        <div>
+          <div id="dialogboxhead"></div>
+          <div id="dialogboxbody">
+          </div>
+          <div id="dialogboxfoot"></div>
+        </div>
+      </div>
+    </div> <!-- /container -->
+
+<!--Loading Js Scripts -->
+<script type="text/javascript" src="scripts/app.js"></script>
+
+</body>
+</html>
