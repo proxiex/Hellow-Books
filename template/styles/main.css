@@ -63,8 +63,7 @@ select, input[type='text'], input[type='number'], input[type='password'], input[
 }
 
 #form input[type='submit'] {
-	width: 107%;
-	margin-left: -3.5%;
+	width: 98%;
 	padding: 2%;
 	background: #446CB4;
 	border: 0;
