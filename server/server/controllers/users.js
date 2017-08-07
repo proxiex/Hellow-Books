@@ -13,15 +13,14 @@ module.exports = {
             .then(register => res.status(201).send(register))
             .catch(error => res.status(400).send(error));
     },
-    /** 
-        login(req, res) {
-            return login
-                .findOne({
-                    where: {
-                        email: req.body.email,
-                        password: req.body.password
-                    }
-                })
-                //.then((found)=>)
-        }*/
+    login(req, res) {
+        return login
+            .findOne({
+                where: {
+                    email: req.body.email,
+                    password: req.body.password
+                }
+            })
+            //.then((found)=>)
+    }
 }
