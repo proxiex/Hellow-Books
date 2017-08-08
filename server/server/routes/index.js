@@ -18,6 +18,7 @@ module.exports = (app) => {
     }));
 
     app.post('/api/users/signup', userController.register);
+    app.post('/api/users/signin', userController.login);
 
     // Books API's
     app.get('/api/books', bookController.getAll);
