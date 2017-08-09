@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
     const book = sequelize.define('book', {
-        book_id: {
+        ISBN: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
@@ -10,6 +10,10 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         author: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        publisher: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -28,9 +32,9 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         classMethods: {
             associate: (models) => {
-                //Todo.hasMany(models.TodoItem, {
-                //
-                // });
+                book.hasMany(models.borrow, {
+                    foreignKey: "bookId",
+                });
             },
         },
     });

@@ -8,10 +8,10 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
-            email: {
-                type: Sequelize.STRING
+            userId: {
+                type: Sequelize.INTEGER
             },
-            bookid: {
+            bookId: {
                 type: Sequelize.INTEGER
             },
             date_collected: {
@@ -23,6 +23,10 @@ module.exports = {
             date_due: {
                 type: Sequelize.DATE
             },
+            returned: {
+                type: Sequelize.BOOLEAN
+            },
+
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE

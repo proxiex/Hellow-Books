@@ -1,6 +1,9 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
     const users = sequelize.define('users', {
+        photo: {
+            type: DataTypes.TEXT,
+        },
         username: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -8,6 +11,8 @@ module.exports = (sequelize, DataTypes) => {
         email: {
             type: DataTypes.STRING,
             allowNull: false,
+            unique: true,
+            isEmail: true,
         },
         password: {
             type: DataTypes.STRING,
@@ -23,12 +28,16 @@ module.exports = (sequelize, DataTypes) => {
             defaultValue: 'User',
             allowNull: false,
         },
+        borrowed: {
+            type: DataTypes.INTEGER,
+            defaultValue: 0,
+        },
     }, {
         classMethods: {
             associate: (models) => {
-                //Todo.hasMany(models.TodoItem, {
-                //
-                // });
+                users.hasMany(models.borrow, {
+                    foereignKey: "userId",
+                });
             },
         },
     });

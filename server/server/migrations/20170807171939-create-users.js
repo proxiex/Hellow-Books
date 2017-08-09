@@ -8,6 +8,9 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
+            photo: {
+                type: Sequelize.TEXT
+            },
             username: {
                 type: Sequelize.STRING
             },
@@ -23,7 +26,9 @@ module.exports = {
             role: {
                 type: Sequelize.STRING
             },
-
+            borrowed: {
+                type: Sequelize.INTEGER
+            },
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE

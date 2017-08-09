@@ -1,11 +1,11 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
     const borrow = sequelize.define('borrow', {
-        email: {
-            type: DataTypes.STRING,
+        userId: {
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
-        bookid: {
+        bookId: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
@@ -16,19 +16,26 @@ module.exports = (sequelize, DataTypes) => {
 
         date_returned: {
             type: DataTypes.DATE,
-            allowNull: false,
         },
 
         date_due: {
             type: DataTypes.DATE,
             allowNull: false,
+        },
+
+        returned: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: false,
         }
     }, {
         classMethods: {
             associate: (models) => {
-                // Todo.hasMany(models.TodoItem, {
-                //
-                //});
+                borrow.belongsTo(models.book, {
+                    foreignKey: "bookId",
+                });
+                borrow.belongsTo(models.users, {
+                    foreignKey: "userId",
+                });
             },
         },
     });
