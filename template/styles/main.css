@@ -96,7 +96,7 @@ input[type='submit'] {
 }
 
 #g_plus img{
-	width: 90%;
+	width: 100%;
 	margin-left: 5%;
 	height: 50px;
 }
@@ -312,7 +312,7 @@ input[type='submit'] {
 	}
 	
 	#form {
-	 width: 100%;
+	 width: 90%;
 	 margin: 0 auto;
 	}
 	
